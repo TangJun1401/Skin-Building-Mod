@@ -1,0 +1,1101 @@
+<Stories><List>
+	
+	<Story Name="Story_ThanDien12" Parent="BaseFillingStory">
+		<DisplayName>Chọn giới tính</DisplayName>
+		<Desc>Vui lòng chọn giới tính của nhân vật.</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Nữ</Display>
+				<Condition><![CDATA[
+				me:GetSex() == 2
+				]]>
+				</Condition>
+				<OKResult><![CDATA[
+					me:TriggerStory("Story_Female_modelChange1");
+				]]>	
+				</OKResult>
+				<NOResult>me:AddMsg(XT("[NAME] Chẳng làm gì cả, đã rời đi."));</NOResult>
+			</li>
+			<li>
+				<Display>Nam</Display>
+				<Condition><![CDATA[
+				me:GetSex() == 1
+				]]>
+				</Condition>
+				<OKResult><![CDATA[
+					me:TriggerStory("Story_Male_modelChange1");
+				]]>	
+				</OKResult>
+				<NOResult>me:AddMsg(XT("[NAME] Chẳng làm gì cả, đã rời đi."));</NOResult>
+			</li>
+			<li>
+				<Display>Đi Nhầm</Display>
+				<OKResult>
+				<![CDATA[	
+					me:AddMsg(XT("[NAME] 啥事没干，Rời đi了"));
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="Story_Female_modelChange1"  Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>A Nô</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_1", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lâm Nguyệt Như</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_2", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Long Huy</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_3", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thác Bạt Ngọc Nhi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_4", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Đường Tuyết Kiến</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_5", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Triệu Linh Nhi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_6", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Muội Hồng Phát</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_7", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+				me:TriggerStory("Story_Female_modelChange2")
+				</OKResult>
+			</li>
+
+		</Selections>
+	</Story>
+	<Story Name="Story_Female_modelChange2"  Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第二页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Muội Lam Y</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_8", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Muội Miêu Cương</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_9", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Muội Thanh Y</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_10", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Muội Tử Phát</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_11", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Muội Linh Khí</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_12", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Bát Trọng Thần Tử</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_13", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display>
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange3")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="Story_Female_modelChange3"  Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第三页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Lôi Điện Tướng Quân</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_14", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lý Tố Thường</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_15", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thảo Thần</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_16", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Phù Huyền</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_17", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thần Lý Lăng Hoa</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_18", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Kha Phu Khả</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_19", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ôn Tuệ</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_20", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Vương Bồng Tự</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_21", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tử Huyên</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_22", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange4")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange2")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		<Story Name="Story_Female_modelChange4" Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第四页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>babara</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_23", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>ganyu</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_24", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>hutao</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_25", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>keli</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_26", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>lumi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_27", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>NguyetThu</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_28", false);
+				</OKResult>
+			</li>
+						<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange5")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange3")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+		</Story>
+		<Story Name="Story_Female_modelChange5" Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第五页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>MinatoAqua</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_29", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Megumin</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_30", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Aqua</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_31", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Darkness</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_32", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Liya</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_33", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Hạo Nguyệt</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_34", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Linh Sương</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_35", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ngọc Vân</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_36", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange6");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange4")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		<Story Name="Story_Female_modelChange6" Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第六页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Tuyết Lam</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_37", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Diệp Nhi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_38", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Bích Dao</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_39", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tinh Vân</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_40", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thục Nghi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_41", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lam Yên</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_42", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tiểu Mai</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_43", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Nhược Thủy</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_44", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange7");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange6")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		<Story Name="Story_Female_modelChange7" Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第七页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Canh Trần vp</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_45", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Canh Trần bikini</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_46", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Kính Lưu</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_47", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Pulao</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_48", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Selena</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_49", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thiên Hạc</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_50", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Miêu Nhi</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_51", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange8");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange6")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		<Story Name="Story_Female_modelChange8" Parent="BaseFillingStory">
+		<DisplayName>Người mẫu nữ</DisplayName>
+		<Desc>Đối với mô hình và hình đại diện nữ.。第八页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Bích Dao</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_52", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Điêu Thuyền</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_53", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lục Tuyết Kỳ</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_54", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Mỹ Đỗ Toa</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_55", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ngu Cơ</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_56", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tiểu Y Tiên</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_57", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tử Hà</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_58", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Vân Vận</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_59", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Đắc Kỷ</Display> 
+				<OKResult>
+					me:AddModifier("Female_Model_Change_60", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quay lại trang đầu tiên.</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Female_modelChange7")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+
+
+
+
+	
+	<Story Name="Story_Male_modelChange1"  Parent="BaseFillingStory">
+		<DisplayName>Nam người mẫu</DisplayName>
+		<Desc>Đối với người mẫu nam và ảnh đại diện.。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Trần Tĩnh Cừu</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_1", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Cổ Nguyệt</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_2", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lý Tịnh</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_3", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lý Tiêu Dao</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_4", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Kiếm Tiên</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_5", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tửu Kiếm Tiên</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_6", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Vũ Văn Thác</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_7", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display> 
+				<OKResult>
+				me:TriggerStory("Story_Male_modelChange2")
+				</OKResult>
+			</li>
+
+		</Selections>
+	</Story>
+	<Story Name="Story_Male_modelChange2"  Parent="BaseFillingStory">
+		<DisplayName>Nam người mẫu</DisplayName>
+		<Desc>Đối với người mẫu nam và ảnh đại diện.。第二页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+				<li>
+				<Display>Trùng Lâu</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_8", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Hồng Y</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_9", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thất Bảo</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_10", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lam Y</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_11", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Huyết Y</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_12", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tử Phát</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_13", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tử Y</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_14", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Bạch Y</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_15", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Mãnh Nam</Display> 
+				<OKResult>
+					me:AddModifier("Male_Model_Change_16", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display>
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange3");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display> 
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange1")
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display> 
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	    <Story Name="Story_Male_modelChange3" Parent="BaseFillingStory">
+        <DisplayName>Nam người mẫu</DisplayName>
+        <Desc>Đối với người mẫu nam và ảnh đại diện.。第三页</Desc>
+        <Kind>None</Kind>
+        <Selections>
+            <li>
+                <Display>Từ Trường Anh</Display>
+                <OKResult>
+                    me:AddModifier("Male_Model_Change_17", false);
+                </OKResult>
+            </li>
+            <li>
+                <Display>Nam Cung Hoàng</Display>
+                <OKResult>
+                    me:AddModifier("Male_Model_Change_18", false);
+                </OKResult>
+            </li>
+            <li>
+                <Display>Tinh Toàn</Display>
+                <OKResult>
+                    me:AddModifier("Male_Model_Change_19", false);
+                </OKResult>
+            </li>
+            <li>
+                <Display>Cảnh Thiên</Display>
+                <OKResult>
+                    me:AddModifier("Male_Model_Change_20", false);
+                </OKResult>
+            </li>
+            <li>
+                <Display>Tử Lăng Hoa</Display>
+                <OKResult>
+                    me:AddModifier("Male_Model_Change_21", false);
+                </OKResult>
+            </li>
+			<li>
+				<Display>Trương Cầm</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_22", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Long Minh</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_23", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Thành Nhân</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_24", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Đô Sát</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_25", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Vương Phú</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_26", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Huyền Tiêu</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_27", false);
+				</OKResult>
+			</li>
+			<li>
+            <Display>Trang Tiếp</Display>
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange4");
+				</OKResult>
+        	</li>
+            <li>
+                <Display>Trang trước</Display>
+                <OKResult>
+                    me:TriggerStory("Story_Male_modelChange2");
+                </OKResult>
+            </li>
+            <li>
+                <Display>Rời đi</Display>
+                <OKResult>
+                    me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+                </OKResult>
+            </li>
+        </Selections>
+    </Story>
+		<Story Name="Story_Male_modelChange4" Parent="BaseFillingStory">
+		<DisplayName>Nam người mẫu</DisplayName>
+		<Desc>Đối với người mẫu nam và ảnh đại diện.。第四页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Trần Vô Kỵ</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_28", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Dương Thiên Hành</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_29", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Vân Mộng Phong</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_30", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lý Thanh Vũ</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_31", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Hạ Vô Danh</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_32", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tô Dạ Minh</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_33", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Bạch Nhạn Trì</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_34", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lục Trầm Ngôn</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_35", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Phong Vân Kiệt</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_36", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Hàn Thương Hải</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_37", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tạ Mộng Vũ</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_38", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Kỷ Thiên Sách</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_39", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Mạc Thiên Lạc</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_40", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Chu Hạo Nhiên</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_41", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Âu Dương Trác</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_42", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tiêu Nhược Phong</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_43", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Triệu Kỳ Anh</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_44", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quân Bất Diệt</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_45", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Nghiêm Hạo Thiên</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_46", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trịnh Huyền Phong</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_47", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ngô Thanh Liêm</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_48", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Dư Vô Ưu</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_49", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang tiếp theo</Display>
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange5");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display>
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange3");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display>
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		<Story Name="Story_Male_modelChange5" Parent="BaseFillingStory">
+		<DisplayName>Nam người mẫu</DisplayName>
+		<Desc>Đối với người mẫu nam và ảnh đại diện.。第五页</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>Dược Lão</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_50", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Hậu Nghệ</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_51", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Human</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_52", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Huyết Ma</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_53", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Lữ Bố</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_54", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ma Thần</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_55", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Mutant</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_56", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Quan Vũ</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_57", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Robot</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_58", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Ngộ Không</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_59", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Tiêu Viêm</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_60", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>U Minh</Display>
+				<OKResult>
+					me:AddModifier("Male_Model_Change_61", false);
+				</OKResult>
+			</li>
+			<li>
+				<Display>Trang trước</Display>
+				<OKResult>
+					me:TriggerStory("Story_Male_modelChange4");
+				</OKResult>
+			</li>
+			<li>
+				<Display>Rời đi</Display>
+				<OKResult>
+					me:AddMsg("[NAME]Nghĩ một hồi... bây giờ trông có vẻ đẹp hơn.。");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>

@@ -1,0 +1,11 @@
+cq ngh xx jt lyg chưa có ảnh nền
+FBX
+cqq.FBX
+xxx.FBX
+CHName
+TruongCam
+HuyenTieu
+
+role 
+cqq.png
+xxx.png
